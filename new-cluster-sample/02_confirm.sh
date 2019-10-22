@@ -1,5 +1,6 @@
 #!/bin/bash
-set -eu
+
+# I recommend that you should run one by one manually
 
 PROJECT_ID=myproj-193510
 CLUSTER_NAME=cluster-witest
