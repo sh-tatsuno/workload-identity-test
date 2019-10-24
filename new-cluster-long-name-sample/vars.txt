@@ -1,0 +1,5 @@
+PROJECT_ID=XXXXX
+CLUSTER_NAME=cluster-workloadidentity-test
+GSA_NAME=gsa-workloadidentity-test
+K8S_NAMESPACE=ns-workloadidentity-test
+KSA_NAME=ksa-workloadidentity-test

@@ -2,11 +2,8 @@
 
 # I recommend that you should run one by one manually
 
-PROJECT_ID=myproj-193510
-CLUSTER_NAME=cluster-witest
-GSA_NAME=gsa-witest
-K8S_NAMESPACE=ns-witest
-KSA_NAME=ksa-witest
+cd `dirname $0`
+. ./vars.txt
 
 gcloud container clusters get-credentials $CLUSTER_NAME
 

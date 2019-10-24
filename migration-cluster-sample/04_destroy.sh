@@ -2,12 +2,8 @@
 
 # set -eu
 
-PROJECT_ID=myproj-193510
-CLUSTER_NAME=cluster-witest
-GSA_NAME=gsa-witest
-K8S_NAMESPACE=ns-witest
-KSA_NAME=ksa-witest
-NODEPOOL_NAME=default-pool
+cd `dirname $0`
+. ./vars.txt
 
 # contingency
 gcloud beta container node-pools update $NODEPOOL_NAME \

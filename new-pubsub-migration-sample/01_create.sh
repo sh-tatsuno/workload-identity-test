@@ -1,19 +1,8 @@
 #!/bin/bash
 set -eu
 
-# configuration
-PROJECT_ID=myproj-193510
-REGION=us-central1
-ZONE=us-central1-f
-FILE=key.json
-
-# pubsub names are binding with the container of pubsub-sample image
-PUBSUB_TOPIC=echo # DO NOT CHANGE
-PUBSUB_SUBSCRIPTION=echo-read # DO NOT CHANGE
-
-CLUSTER_NAME=pubsub-test
-K8S_NAMESPACE_1=ns-pubsub1
-K8S_NAMESPACE_2=ns-pubsub2
+cd `dirname $0`
+. ./vars.txt
 
 cd `dirname $0`
 if [ ! -e $FILE ]; then

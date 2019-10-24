@@ -1,19 +1,7 @@
 #!/bin/bash
 
-PROJECT_ID=myproj-193510
-REGION=us-central1
-ZONE=us-central1-f
-
-CLUSTER_NAME=pubsub-test
-GSA_NAME=gsa-pubsub
-K8S_NAMESPACE=ns-pubsub1
-KSA_NAME=ksa-pubsub1
-NODEPOOL_NAME=default-pool
-NEW_NODEPOOL_NAME=witest-pool
-
-# pubsub names are binding with the container of pubsub-sample image
-PUBSUB_TOPIC=echo # DO NOT CHANGE
-PUBSUB_SUBSCRIPTION=echo-read # DO NOT CHANGE
+cd `dirname $0`
+. ./vars.txt
 
 gcloud iam service-accounts remove-iam-policy-binding \
     --role roles/iam.workloadIdentityUser \

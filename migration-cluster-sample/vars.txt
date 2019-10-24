@@ -1,0 +1,6 @@
+PROJECT_ID=XXXXX
+CLUSTER_NAME=cluster-witest
+GSA_NAME=gsa-witest
+K8S_NAMESPACE=ns-witest
+KSA_NAME=ksa-witest
+NODEPOOL_NAME=default-pool

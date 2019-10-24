@@ -15,6 +15,9 @@
 
 - new-cluster-sample
   - 新しくWorkload Identityを有効にしたクラスタを作成するサンプル
+- new-cluster-long-name-sample
+  - 新しくWorkload Identityを有効にしたクラスタを作成するサンプル
+  - 名前が長いだけだが動かない
 - migration-cluster-sample
   - 既存のクラスタのWorkload Identityを有効にするサンプル
   - 使っているnodeを直接アップグレードする

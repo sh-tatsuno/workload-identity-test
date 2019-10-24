@@ -2,13 +2,8 @@
 
 set -eu
 
-PROJECT_ID=myproj-193510
-CLUSTER_NAME=cluster-witest
-GSA_NAME=gsa-witest
-K8S_NAMESPACE=ns-witest
-KSA_NAME=ksa-witest
-NODEPOOL_NAME=default-pool
-NEW_NODEPOOL_NAME=witest-pool
+cd `dirname $0`
+. ./vars.txt
 
 gcloud config set project $PROJECT_ID
 gcloud config set compute/region us-central1

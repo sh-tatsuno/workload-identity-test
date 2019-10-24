@@ -1,17 +1,8 @@
 #!/bin/bash
 set -eu
 
-# configuration
-PROJECT_ID=myproj-193510
-REGION=us-central1
-ZONE=us-central1-f
-
-CLUSTER_NAME=pubsub-test
-GSA_NAME=gsa-pubsub
-K8S_NAMESPACE=ns-pubsub1
-KSA_NAME=ksa-pubsub1
-NODEPOOL_NAME=default-pool
-NEW_NODEPOOL_NAME=witest-pool
+cd `dirname $0`
+. ./vars.txt
 
 gcloud config set project $PROJECT_ID
 gcloud config set compute/region $REGION
