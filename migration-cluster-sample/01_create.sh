@@ -24,6 +24,10 @@ kubectl create serviceaccount \
     --namespace $K8S_NAMESPACE \
     $KSA_NAME
 
+# update cluster
+gcloud beta container clusters update $CLUSTER_NAME \
+    --identity-namespace=$PROJECT_ID.svc.id.goog
+
 # update node-pools
 gcloud beta container node-pools update $NODEPOOL_NAME \
     --cluster=$CLUSTER_NAME \

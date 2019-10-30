@@ -32,12 +32,3 @@ gcloud beta container clusters update $CLUSTER_NAME \
 gcloud beta container node-pools create $NEW_NODEPOOL_NAME \
     --cluster=$CLUSTER_NAME \
     --workload-metadata-from-node=GKE_METADATA_SERVER
-
-for node in $(kubectl get nodes -l cloud.google.com/gke-nodepool=$NODEPOOL_NAME -o=name); do
-    kubectl cordon "$node";
-done
-# kubectl get nodes
-
-for node in $(kubectl get nodes -l cloud.google.com/gke-nodepool=$NODEPOOL_NAME -o=name); do
-    kubectl drain --force --ignore-daemonsets --delete-local-data --grace-period=10 "$node";
-done
